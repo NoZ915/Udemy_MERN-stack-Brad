@@ -12,6 +12,7 @@ import './assets/styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import HomeScreen from './screens/HomeScreen';
+import ProductScreen from './screens/ProductScreen';
 
 //-----第一種寫法-----//
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
         element: <HomeScreen />,
         index: true
         //index為true代表當進入根路由"/"時，如果沒有其他子路由匹配，則顯示 <HomeScreen /> 元件
+      },
+      {
+        path: "/product/:id",
+        element: <ProductScreen />
       }
     ]
   }
